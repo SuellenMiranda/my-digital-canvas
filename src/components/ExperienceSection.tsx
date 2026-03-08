@@ -36,7 +36,7 @@ const experienceMedia: Record<number, MediaItem[]> = {
 
 const ExperienceSection = () => {
   const { t } = useLanguage();
-  const [expandedVideo, setExpandedVideo] = useState<string | null>(null);
+  
 
   return (
     <section id="experience" className="py-24 px-6">
