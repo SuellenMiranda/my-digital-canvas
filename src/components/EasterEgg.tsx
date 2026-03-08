@@ -46,7 +46,7 @@ function getFathersDayDate(year: number): Date {
 }
 
 function getTodayHoliday(): HolidayInfo | null {
-  const now = new Date(2026, 9, 9); // TESTE: aniversário - voltar para new Date() depois
+  const now = new Date();
   const month = now.getMonth(); // 0-indexed
   const day = now.getDate();
   const year = now.getFullYear();
@@ -224,7 +224,7 @@ export default function EasterEgg() {
 
   if (!holiday || dismissed) return null;
 
-  const isBirthday = true; // TESTE: forçando confetes - voltar para checagem real depois
+  const isBirthday = new Date().getMonth() === 9 && new Date().getDate() === 9;
   const Icon = holiday.icon;
 
   return (
