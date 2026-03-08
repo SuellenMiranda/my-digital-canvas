@@ -107,6 +107,29 @@ const ExperienceSection = () => {
                                 )}
                               </div>
                             )}
+                            {m.type === "jumpshare" && (
+                              <div>
+                                {expandedVideo === m.src ? (
+                                  <div className="rounded-lg overflow-hidden border border-border" style={{ position: "relative", paddingBottom: "90%", height: 0 }}>
+                                    <iframe
+                                      src={m.src}
+                                      title={m.label}
+                                      allowFullScreen
+                                      allow="autoplay"
+                                      style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, border: "none" }}
+                                    />
+                                  </div>
+                                ) : (
+                                  <button
+                                    onClick={() => setExpandedVideo(m.src)}
+                                    className="w-full h-28 rounded-lg border border-border bg-secondary/50 hover:bg-secondary hover:border-primary/40 transition-all flex flex-col items-center justify-center gap-2"
+                                  >
+                                    <Play className="w-6 h-6 text-primary" />
+                                    <span className="text-xs text-muted-foreground">{m.label}</span>
+                                  </button>
+                                )}
+                              </div>
+                            )}
                           </div>
                         ))}
                       </div>
