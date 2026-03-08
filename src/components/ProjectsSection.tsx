@@ -2,10 +2,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { ExternalLink } from "lucide-react";
 
 const projectImages = [
+  "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
   "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=600&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop",
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
 ];
 
 const ProjectsSection = () => {
@@ -30,7 +30,11 @@ const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="text-lg font-semibold text-foreground">{project.title}</h3>
-                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
+                  {project.link && (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex-shrink-0 mt-1">
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  )}
                 </div>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
@@ -40,6 +44,11 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
+                {project.link && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-sm text-primary hover:underline">
+                    {t.projects.view} →
+                  </a>
+                )}
               </div>
             </div>
           ))}
