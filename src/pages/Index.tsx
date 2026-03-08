@@ -10,6 +10,7 @@ import CoverLetterSection from "@/components/CoverLetterSection";
 import ResumesSection from "@/components/ResumesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
@@ -27,6 +28,7 @@ const Index = () => {
           <ContactSection />
         </main>
         <Footer />
+        <ScrollToTop />
       </LanguageProvider>
     </ThemeProvider>
   );
