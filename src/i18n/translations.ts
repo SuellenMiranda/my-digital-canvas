@@ -36,6 +36,7 @@ export const translations = {
       design: "Design",
       sap: "SAP & ERP",
       tools: "Cloud & Ferramentas",
+      games: "Desenvolvimento de Jogos",
       other: "Outros",
     },
     experience: {
@@ -229,6 +230,7 @@ export const translations = {
       design: "Design",
       sap: "SAP & ERP",
       tools: "Cloud & Tools",
+      games: "Game Development",
       other: "Other",
     },
     experience: {

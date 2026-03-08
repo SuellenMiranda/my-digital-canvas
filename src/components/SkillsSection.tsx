@@ -10,6 +10,7 @@ const SkillsSection = () => {
     { key: "design" as const, label: t.skills.design },
     { key: "sap" as const, label: t.skills.sap },
     { key: "tools" as const, label: t.skills.tools },
+    { key: "games" as const, label: t.skills.games },
     { key: "other" as const, label: t.skills.other },
   ];
 

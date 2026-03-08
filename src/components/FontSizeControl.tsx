@@ -3,8 +3,10 @@ import { Plus, Minus, Type } from "lucide-react";
 
 const FONT_SIZES = [
   { label: "A", value: 100 },
-  { label: "A+", value: 112 },
-  { label: "A++", value: 125 },
+  { label: "A+", value: 110 },
+  { label: "A++", value: 120 },
+  { label: "A+++", value: 135 },
+  { label: "A++++", value: 150 },
 ];
 
 export default function FontSizeControl() {
