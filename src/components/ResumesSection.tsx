@@ -1,5 +1,4 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { FileText } from "lucide-react";
 
 const resumeLinks = {
   basic: {
