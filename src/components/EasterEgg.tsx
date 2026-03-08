@@ -228,27 +228,36 @@ export default function EasterEgg() {
   const Icon = holiday.icon;
 
   return (
-    <div className="fixed bottom-20 right-6 z-50 animate-in slide-in-from-bottom-4 fade-in duration-700">
-      <div
-        className={`relative bg-gradient-to-br ${holiday.theme} backdrop-blur-xl border rounded-2xl p-5 max-w-sm shadow-2xl`}
-      >
-        {isBirthday && <BirthdayConfetti />}
-        <button
-          onClick={handleDismiss}
-          className="absolute top-2 right-2 p-1 rounded-full hover:bg-foreground/10 transition-colors text-foreground/60"
-        >
-          <X className="w-4 h-4" />
-        </button>
-        <div className="flex items-start gap-3">
-          <div className="text-3xl shrink-0 mt-0.5">
-            <Icon className="w-7 h-7 text-primary" />
+    <div className="fixed bottom-20 right-6 z-50 animate-in slide-in-from-bottom-4 fade-in duration-700 max-w-sm">
+      <div className="relative overflow-hidden rounded-2xl border shadow-2xl">
+        {/* Top banner - themed with emojis */}
+        <div className={`relative bg-gradient-to-r ${holiday.theme} px-4 py-3 flex items-center justify-between`}>
+          {isBirthday && <BirthdayConfetti />}
+          <div className="flex items-center gap-2 text-lg">
+            {["🎉", holiday.emoji, "✨", holiday.emoji, "🎊"].map((e, i) => (
+              <span key={i} className="animate-bounce" style={{ animationDelay: `${i * 0.15}s` }}>
+                {e}
+              </span>
+            ))}
+          </div>
+          <button
+            onClick={handleDismiss}
+            className="p-1 rounded-full hover:bg-foreground/10 transition-colors text-foreground/60 z-10"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+        {/* Bottom content - icon + text */}
+        <div className="bg-background/95 backdrop-blur-xl px-4 py-4 flex items-start gap-3">
+          <div className="shrink-0 mt-0.5">
+            <Icon className="w-6 h-6 text-primary" />
           </div>
           <div>
             <p className="text-sm font-medium text-foreground leading-relaxed">
               {language === "pt" ? holiday.pt : holiday.en}
             </p>
-            <p className="text-xs text-muted-foreground mt-2">
-              {holiday.emoji} {language === "pt" ? "Easter egg do dia!" : "Today's easter egg!"}
+            <p className="text-xs text-muted-foreground mt-1.5">
+              {language === "pt" ? "Easter egg do dia!" : "Today's easter egg!"}
             </p>
           </div>
         </div>
