@@ -13,7 +13,7 @@ const ProjectsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="projects" className="py-24 px-6 bg-card/30">
+    <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6 bg-card/30">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-16 text-center">{t.projects.title}</h2>
 
@@ -29,7 +29,7 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {t.projects.items.map((project, i) => {
             const data = projectData[i];
             const projectLink = data?.link || project.link;
@@ -43,7 +43,7 @@ const ProjectsSection = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-4 sm:p-6">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="text-lg font-semibold text-foreground">{project.title}</h3>
                     {projectLink && (

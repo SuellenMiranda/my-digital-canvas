@@ -39,20 +39,20 @@ const ExperienceSection = () => {
   
 
   return (
-    <section id="experience" className="py-24 px-6">
+    <section id="experience" className="py-16 sm:py-24 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-16 text-center">{t.experience.title}</h2>
 
         <div className="relative">
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border" />
+          <div className="absolute left-2 sm:left-4 top-0 bottom-0 w-0.5 bg-border" />
 
-          <div className="space-y-16">
+          <div className="space-y-12 sm:space-y-16">
             {t.experience.items.map((item, i) => {
               const media = experienceMedia[i] || [];
               return (
-                <div key={i} className="relative pl-12">
+                <div key={i} className="relative pl-8 sm:pl-12">
                   {/* Dot */}
-                  <div className="absolute left-4 -translate-x-1/2 w-3 h-3 bg-primary rounded-full ring-4 ring-background z-10 mt-1.5" />
+                  <div className="absolute left-2 sm:left-4 -translate-x-1/2 w-3 h-3 bg-primary rounded-full ring-4 ring-background z-10 mt-1.5" />
 
                   {/* Content */}
                   <div>

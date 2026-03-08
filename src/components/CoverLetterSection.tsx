@@ -5,13 +5,13 @@ const CoverLetterSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="cover-letter" className="py-24 px-6">
+    <section id="cover-letter" className="py-16 sm:py-24 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-12 text-center">
           {t.resumes.cover_letter}
         </h2>
 
-        <div className="rounded-xl bg-card border border-border p-8 md:p-12 space-y-6 text-foreground leading-relaxed">
+        <div className="rounded-xl bg-card border border-border p-5 sm:p-8 md:p-12 space-y-6 text-foreground leading-relaxed">
           <div className="text-center mb-8">
             <h3 className="text-xl font-bold text-foreground">Suellen Miranda Amorim</h3>
             <p className="text-sm text-muted-foreground mt-1">
