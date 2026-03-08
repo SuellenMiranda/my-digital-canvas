@@ -224,7 +224,7 @@ export default function EasterEgg() {
 
   if (!holiday || dismissed) return null;
 
-  const isBirthday = true; // TESTE: forçando confetes - voltar para checagem real depois
+  const isBirthday = new Date().getMonth() === 9 && new Date().getDate() === 9;
   const Icon = holiday.icon;
 
   return (
