@@ -49,7 +49,7 @@ const ResumesSection = () => {
         </div>
 
         <div className="flex justify-center">
-          <a href="https://suellenmiranda.github.io/Portifolio/pages/recrutest.html" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-border rounded-full text-sm text-foreground hover:border-primary hover:text-primary transition-colors">
+          <a href="#disc" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-border rounded-full text-sm text-foreground hover:border-primary hover:text-primary transition-colors">
             <FileText className="w-4 h-4" />
             {t.resumes.disc_profile}
           </a>
