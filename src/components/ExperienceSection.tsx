@@ -3,7 +3,7 @@ import { MapPin, ExternalLink, Play } from "lucide-react";
 import { useState } from "react";
 
 interface MediaItem {
-  type: "image" | "youtube" | "link";
+  type: "image" | "youtube" | "link" | "jumpshare";
   src: string;
   label?: string;
   href?: string;
@@ -22,7 +22,14 @@ const experienceMedia: Record<number, MediaItem[]> = {
     { type: "image", src: "/images/demo.jpg", label: "Demo Bryntum", href: "https://bryntum.com/products/gantt/examples/portfolio-planning" },
   ],
   3: [],
-  4: [],
+  4: [
+    { type: "jumpshare", src: "https://jumpshare.com/embed/lomxWNKY86IxFCOTeiw0", label: "VR Demo 1" },
+    { type: "jumpshare", src: "https://jumpshare.com/embed/SUv0ZduF2xRB4EcJDCoz", label: "VR Demo 2" },
+    { type: "jumpshare", src: "https://jumpshare.com/embed/U8VLAJj2vZcTU2mwOLal", label: "VR Demo 3" },
+    { type: "jumpshare", src: "https://jumpshare.com/embed/ntcNa7E3Dr43TgNwPRfI", label: "VR Video 1" },
+    { type: "jumpshare", src: "https://jumpshare.com/embed/Obk30nWBPXIVcaksH1iv", label: "VR Video 2" },
+    { type: "jumpshare", src: "https://jumpshare.com/embed/SNJkwS6I76KWC94Cm7IA", label: "VR Video 3" },
+  ],
   5: [
     { type: "youtube", src: "https://www.youtube.com/embed/kE0_r3Eb6a8", label: "Colação de Grau — UVV 2024" },
   ],
@@ -86,6 +93,29 @@ const ExperienceSection = () => {
                                       src={m.src}
                                       title={m.label}
                                       allowFullScreen
+                                      style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, border: "none" }}
+                                    />
+                                  </div>
+                                ) : (
+                                  <button
+                                    onClick={() => setExpandedVideo(m.src)}
+                                    className="w-full h-28 rounded-lg border border-border bg-secondary/50 hover:bg-secondary hover:border-primary/40 transition-all flex flex-col items-center justify-center gap-2"
+                                  >
+                                    <Play className="w-6 h-6 text-primary" />
+                                    <span className="text-xs text-muted-foreground">{m.label}</span>
+                                  </button>
+                                )}
+                              </div>
+                            )}
+                            {m.type === "jumpshare" && (
+                              <div>
+                                {expandedVideo === m.src ? (
+                                  <div className="rounded-lg overflow-hidden border border-border" style={{ position: "relative", paddingBottom: "90%", height: 0 }}>
+                                    <iframe
+                                      src={m.src}
+                                      title={m.label}
+                                      allowFullScreen
+                                      allow="autoplay"
                                       style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, border: "none" }}
                                     />
                                   </div>
