@@ -46,7 +46,7 @@ function getFathersDayDate(year: number): Date {
 }
 
 function getTodayHoliday(): HolidayInfo | null {
-  const now = new Date();
+  const now = new Date(2026, 9, 9); // TESTE: aniversário - voltar para new Date() depois
   const month = now.getMonth(); // 0-indexed
   const day = now.getDate();
   const year = now.getFullYear();
