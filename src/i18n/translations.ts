@@ -91,8 +91,8 @@ export const translations = {
       items: [
         {
           title: "JobMatch — TCC",
-          description: "Projeto de Trabalho de Conclusão de Curso. Aplicação completa como Desenvolvedora Mobile, Frontend, Backend e Banco de Dados.",
-          tags: ["React Native", "Node.js", "SQL", "UI/UX"],
+          description: "Aplicativo mobile inovador para recrutamento de estágios e empregos. Desenvolvimento completo: UI/UX, Frontend (React Native + Expo), Backend (Node.js + Express.js), Banco de Dados (Prisma ORM). Funcionalidades: cadastro, candidaturas, avaliações interativas e notificações em tempo real.",
+          tags: ["React Native", "Node.js", "SQL", "UI/UX", "Expo"],
           link: "",
         },
         {
@@ -112,6 +112,12 @@ export const translations = {
           description: "Sistema de analytics e dashboard para visualização de tendências de mercado.",
           tags: ["React", "TypeScript", "Charts"],
           link: "",
+        },
+        {
+          title: "Bryntum Portfolio Planning",
+          description: "Demo de planejamento de portfólio com gráfico de Gantt interativo para gerenciamento de projetos corporativos.",
+          tags: ["Gantt", "Project Management", "Demo"],
+          link: "https://bryntum.com/products/gantt/examples/portfolio-planning",
         },
       ],
     },
