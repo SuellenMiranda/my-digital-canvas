@@ -13,6 +13,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import EasterEgg from "@/components/EasterEgg";
+import FontSizeControl from "@/components/FontSizeControl";
 
 const Index = () => {
   return (
@@ -33,6 +34,7 @@ const Index = () => {
         </main>
         <Footer />
         <ScrollToTop />
+        <FontSizeControl />
       </LanguageProvider>
     </ThemeProvider>
   );
