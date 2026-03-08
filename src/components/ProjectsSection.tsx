@@ -29,7 +29,7 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {t.projects.items.map((project, i) => {
             const data = projectData[i];
             const projectLink = data?.link || project.link;
