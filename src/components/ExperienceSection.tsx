@@ -1,6 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { MapPin, ExternalLink, Play } from "lucide-react";
-import { useState } from "react";
+import { MapPin, ExternalLink } from "lucide-react";
 
 interface MediaItem {
   type: "image" | "youtube" | "link" | "jumpshare";
@@ -37,7 +36,7 @@ const experienceMedia: Record<number, MediaItem[]> = {
 
 const ExperienceSection = () => {
   const { t } = useLanguage();
-  const [expandedVideo, setExpandedVideo] = useState<string | null>(null);
+  
 
   return (
     <section id="experience" className="py-24 px-6">
@@ -86,48 +85,26 @@ const ExperienceSection = () => {
                               </div>
                             )}
                             {m.type === "youtube" && (
-                              <div>
-                                {expandedVideo === m.src ? (
-                                  <div className="rounded-lg overflow-hidden border border-border" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
-                                    <iframe
-                                      src={m.src}
-                                      title={m.label}
-                                      allowFullScreen
-                                      style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, border: "none" }}
-                                    />
-                                  </div>
-                                ) : (
-                                  <button
-                                    onClick={() => setExpandedVideo(m.src)}
-                                    className="w-full h-28 rounded-lg border border-border bg-secondary/50 hover:bg-secondary hover:border-primary/40 transition-all flex flex-col items-center justify-center gap-2"
-                                  >
-                                    <Play className="w-6 h-6 text-primary" />
-                                    <span className="text-xs text-muted-foreground">{m.label}</span>
-                                  </button>
-                                )}
+                              <div className="rounded-lg overflow-hidden border border-border" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+                                <iframe
+                                  src={m.src}
+                                  title={m.label}
+                                  allowFullScreen
+                                  loading="lazy"
+                                  style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, border: "none" }}
+                                />
                               </div>
                             )}
                             {m.type === "jumpshare" && (
-                              <div>
-                                {expandedVideo === m.src ? (
-                                  <div className="rounded-lg overflow-hidden border border-border" style={{ position: "relative", paddingBottom: "90%", height: 0 }}>
-                                    <iframe
-                                      src={m.src}
-                                      title={m.label}
-                                      allowFullScreen
-                                      allow="autoplay"
-                                      style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, border: "none" }}
-                                    />
-                                  </div>
-                                ) : (
-                                  <button
-                                    onClick={() => setExpandedVideo(m.src)}
-                                    className="w-full h-28 rounded-lg border border-border bg-secondary/50 hover:bg-secondary hover:border-primary/40 transition-all flex flex-col items-center justify-center gap-2"
-                                  >
-                                    <Play className="w-6 h-6 text-primary" />
-                                    <span className="text-xs text-muted-foreground">{m.label}</span>
-                                  </button>
-                                )}
+                              <div className="rounded-lg overflow-hidden border border-border" style={{ position: "relative", paddingBottom: "90%", height: 0 }}>
+                                <iframe
+                                  src={m.src}
+                                  title={m.label}
+                                  allowFullScreen
+                                  allow="autoplay"
+                                  loading="lazy"
+                                  style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, border: "none" }}
+                                />
                               </div>
                             )}
                           </div>
