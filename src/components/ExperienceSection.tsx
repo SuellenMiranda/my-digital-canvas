@@ -22,7 +22,14 @@ const experienceMedia: Record<number, MediaItem[]> = {
     { type: "image", src: "/images/demo.jpg", label: "Demo Bryntum", href: "https://bryntum.com/products/gantt/examples/portfolio-planning" },
   ],
   3: [],
-  4: [],
+  4: [
+    { type: "jumpshare", src: "https://jumpshare.com/embed/lomxWNKY86IxFCOTeiw0", label: "VR Demo 1" },
+    { type: "jumpshare", src: "https://jumpshare.com/embed/SUv0ZduF2xRB4EcJDCoz", label: "VR Demo 2" },
+    { type: "jumpshare", src: "https://jumpshare.com/embed/U8VLAJj2vZcTU2mwOLal", label: "VR Demo 3" },
+    { type: "jumpshare", src: "https://jumpshare.com/embed/ntcNa7E3Dr43TgNwPRfI", label: "VR Video 1" },
+    { type: "jumpshare", src: "https://jumpshare.com/embed/Obk30nWBPXIVcaksH1iv", label: "VR Video 2" },
+    { type: "jumpshare", src: "https://jumpshare.com/embed/SNJkwS6I76KWC94Cm7IA", label: "VR Video 3" },
+  ],
   5: [
     { type: "youtube", src: "https://www.youtube.com/embed/kE0_r3Eb6a8", label: "Colação de Grau — UVV 2024" },
   ],
