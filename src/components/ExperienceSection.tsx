@@ -21,13 +21,11 @@ const experienceMedia: Record<number, MediaItem[]> = {
     { type: "image", src: "/images/design-dev-fullstack.png", label: "Design DEV FullStack" },
     { type: "image", src: "/images/demo.jpg", label: "Demo Bryntum", href: "https://bryntum.com/products/gantt/examples/portfolio-planning" },
   ],
-  3: [
-    { type: "link", src: "", label: "Suporte e testes de aplicações", href: "" },
+  3: [],
+  4: [],
+  5: [
+    { type: "youtube", src: "https://www.youtube.com/embed/kE0_r3Eb6a8", label: "Colação de Grau — UVV 2024" },
   ],
-  4: [
-    { type: "youtube", src: "https://www.youtube.com/embed/kE0_r3Eb6a8", label: "Colação de Grau — UVV" },
-  ],
-  5: [],
 };
 
 const ExperienceSection = () => {
