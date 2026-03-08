@@ -1,6 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { MapPin, ExternalLink, Play } from "lucide-react";
-import { useState } from "react";
+import { MapPin, ExternalLink } from "lucide-react";
 
 interface MediaItem {
   type: "image" | "youtube" | "link" | "jumpshare";
