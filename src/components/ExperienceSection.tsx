@@ -44,7 +44,7 @@ const ExperienceSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-16 text-center">{t.experience.title}</h2>
 
         <div className="relative">
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border" />
+          <div className="absolute left-2 sm:left-4 top-0 bottom-0 w-0.5 bg-border" />
 
           <div className="space-y-16">
             {t.experience.items.map((item, i) => {
