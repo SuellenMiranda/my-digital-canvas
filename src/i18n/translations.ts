@@ -248,8 +248,8 @@ export const translations = {
       items: [
         {
           title: "JobMatch — Thesis",
-          description: "Final thesis project. Complete application as Mobile, Frontend, Backend and Database Developer.",
-          tags: ["React Native", "Node.js", "SQL", "UI/UX"],
+          description: "Innovative mobile app for internship and job recruitment. Complete development: UI/UX, Frontend (React Native + Expo), Backend (Node.js + Express.js), Database (Prisma ORM). Features: registration, applications, interactive reviews and real-time notifications.",
+          tags: ["React Native", "Node.js", "SQL", "UI/UX", "Expo"],
           link: "",
         },
         {
@@ -269,6 +269,12 @@ export const translations = {
           description: "Analytics system and dashboard for market trend visualization.",
           tags: ["React", "TypeScript", "Charts"],
           link: "",
+        },
+        {
+          title: "Bryntum Portfolio Planning",
+          description: "Portfolio planning demo with interactive Gantt chart for corporate project management.",
+          tags: ["Gantt", "Project Management", "Demo"],
+          link: "https://bryntum.com/products/gantt/examples/portfolio-planning",
         },
       ],
     },
