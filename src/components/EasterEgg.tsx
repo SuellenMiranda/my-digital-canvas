@@ -230,7 +230,7 @@ export default function EasterEgg() {
   return (
     <div className="fixed bottom-20 right-6 z-50 animate-in slide-in-from-bottom-4 fade-in duration-700">
       <div
-        className={`relative bg-background/95 backdrop-blur-xl border rounded-2xl p-5 max-w-sm shadow-2xl`}
+        className={`relative bg-gradient-to-br ${holiday.theme} backdrop-blur-xl border rounded-2xl p-5 max-w-sm shadow-2xl`}
       >
         {isBirthday && <BirthdayConfetti />}
         <button
