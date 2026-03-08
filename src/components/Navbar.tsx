@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Globe, Menu, X } from "lucide-react";
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -20,7 +21,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="text-lg font-bold text-gradient">S.M.A</a>
+        <a href="#" className="text-lg font-mono font-bold text-gradient">&lt;/Meu Portfólio&gt;</a>
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
@@ -28,6 +29,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+          <ThemeToggle />
           <button onClick={toggleLang} className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors border border-border rounded-full px-3 py-1">
             <Globe className="w-3.5 h-3.5" />
             {language === "pt" ? "🇧🇷 PT" : "🇺🇸 EN"}
@@ -35,6 +37,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex md:hidden items-center gap-3">
+          <ThemeToggle />
           <button onClick={toggleLang} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary border border-border rounded-full px-2.5 py-1">
             <Globe className="w-3.5 h-3.5" />
             {language === "pt" ? "🇧🇷" : "🇺🇸"}
