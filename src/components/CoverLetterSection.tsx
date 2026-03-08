@@ -11,7 +11,7 @@ const CoverLetterSection = () => {
           {t.resumes.cover_letter}
         </h2>
 
-        <div className="rounded-xl bg-card border border-border p-8 md:p-12 space-y-6 text-foreground leading-relaxed">
+        <div className="rounded-xl bg-card border border-border p-5 sm:p-8 md:p-12 space-y-6 text-foreground leading-relaxed">
           <div className="text-center mb-8">
             <h3 className="text-xl font-bold text-foreground">Suellen Miranda Amorim</h3>
             <p className="text-sm text-muted-foreground mt-1">
