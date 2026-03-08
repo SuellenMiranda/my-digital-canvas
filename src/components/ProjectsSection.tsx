@@ -13,7 +13,7 @@ const ProjectsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="projects" className="py-24 px-6 bg-card/30">
+    <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6 bg-card/30">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-16 text-center">{t.projects.title}</h2>
 
