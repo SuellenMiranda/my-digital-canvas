@@ -12,12 +12,14 @@ import ResumesSection from "@/components/ResumesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import EasterEgg from "@/components/EasterEgg";
 
 const Index = () => {
   return (
     <ThemeProvider>
       <LanguageProvider>
         <Navbar />
+        <EasterEgg />
         <main className="pt-16">
           <HeroSection />
           <AboutSection />
