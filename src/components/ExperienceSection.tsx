@@ -3,7 +3,7 @@ import { MapPin, ExternalLink, Play } from "lucide-react";
 import { useState } from "react";
 
 interface MediaItem {
-  type: "image" | "youtube" | "link";
+  type: "image" | "youtube" | "link" | "jumpshare";
   src: string;
   label?: string;
   href?: string;
