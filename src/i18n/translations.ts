@@ -230,6 +230,7 @@ export const translations = {
       design: "Design",
       sap: "SAP & ERP",
       tools: "Cloud & Tools",
+      games: "Game Development",
       other: "Other",
     },
     experience: {
