@@ -24,7 +24,13 @@ const HeroSection = () => {
         <p className="text-lg md:text-xl text-muted-foreground mb-3 font-light tracking-wide">
           {t.hero.title}
         </p>
-        <p className="text-muted-foreground mb-8 max-w-xl mx-auto leading-relaxed">
+
+        {/* Branding separado */}
+        <p className="text-base md:text-lg text-foreground/80 italic mb-8 max-w-xl mx-auto">
+          "Transformando ideias em soluções digitais inovadoras."
+        </p>
+
+        <p className="text-muted-foreground mb-8 max-w-xl mx-auto leading-relaxed text-sm">
           {t.hero.description}
         </p>
 

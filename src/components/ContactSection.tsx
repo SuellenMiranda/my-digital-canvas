@@ -1,6 +1,14 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Mail, Github, Linkedin, Gamepad2, Twitch, Instagram } from "lucide-react";
 
+const socials = [
+  { icon: Github, label: "GitHub", href: "https://github.com/SuellenMiranda" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/suellenmiranda/" },
+  { icon: Gamepad2, label: "itch.io", href: "#" },
+  { icon: Twitch, label: "Twitch", href: "#" },
+  { icon: Instagram, label: "Instagram", href: "#" },
+];
+
 const ContactSection = () => {
   const { t } = useLanguage();
 
@@ -39,22 +47,21 @@ const ContactSection = () => {
           <h3 className="text-xl font-semibold text-foreground mb-2">{t.contact.follow_title}</h3>
           <p className="text-muted-foreground text-sm mb-6">{t.contact.follow_subtitle}</p>
 
-          <div className="flex justify-center gap-5">
-            <a href="https://github.com/SuellenMiranda" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary text-muted-foreground hover:text-primary hover:border-primary/40 border border-border transition-colors">
-              <Github className="w-5 h-5" />
-            </a>
-            <a href="https://www.linkedin.com/in/suellenmiranda/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary text-muted-foreground hover:text-primary hover:border-primary/40 border border-border transition-colors">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary text-muted-foreground hover:text-primary hover:border-primary/40 border border-border transition-colors">
-              <Gamepad2 className="w-5 h-5" />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary text-muted-foreground hover:text-primary hover:border-primary/40 border border-border transition-colors">
-              <Twitch className="w-5 h-5" />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary text-muted-foreground hover:text-primary hover:border-primary/40 border border-border transition-colors">
-              <Instagram className="w-5 h-5" />
-            </a>
+          <div className="flex justify-center gap-4 flex-wrap">
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-1.5 group"
+              >
+                <div className="p-3 rounded-full bg-secondary text-muted-foreground group-hover:text-primary group-hover:border-primary/40 border border-border transition-colors">
+                  <s.icon className="w-5 h-5" />
+                </div>
+                <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors">{s.label}</span>
+              </a>
+            ))}
           </div>
         </div>
       </div>
