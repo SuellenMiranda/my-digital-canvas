@@ -1,23 +1,17 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-
-const skillsData = {
-  frontend: ["React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "JavaScript", "Next.js"],
-  backend: ["Node.js", "Python", "PostgreSQL", "REST APIs", "Express", "MongoDB"],
-  design: ["Figma", "Adobe XD", "Photoshop", "Illustrator", "UI/UX", "Prototipagem"],
-  sap: ["SAP ABAP", "SAP Fiori", "SAP HANA", "SAP MM", "SAP SD", "SAP Basis"],
-  tools: ["Git", "Docker", "VS Code", "Jira", "Postman", "Linux"],
-};
+import skillsData from "@/data/skills";
 
 const SkillsSection = () => {
   const { t } = useLanguage();
 
   const categories = [
-    { key: "frontend", label: t.skills.frontend },
-    { key: "backend", label: t.skills.backend },
-    { key: "design", label: t.skills.design },
-    { key: "sap", label: t.skills.sap },
-    { key: "tools", label: t.skills.tools },
-  ] as const;
+    { key: "frontend" as const, label: t.skills.frontend },
+    { key: "backend" as const, label: t.skills.backend },
+    { key: "design" as const, label: t.skills.design },
+    { key: "sap" as const, label: t.skills.sap },
+    { key: "tools" as const, label: t.skills.tools },
+    { key: "other" as const, label: t.skills.other },
+  ];
 
   return (
     <section id="skills" className="py-24 px-6 bg-card/30">

@@ -16,8 +16,16 @@ const AboutSection = () => {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-12 text-center">{t.about.title}</h2>
 
-        <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto text-center mb-16">
-          {t.about.text}
+        <div className="max-w-2xl mx-auto text-center mb-6">
+          {t.about.text.split("\n\n").map((paragraph, i) => (
+            <p key={i} className="text-muted-foreground leading-relaxed mb-4">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+
+        <p className="text-center text-xs font-mono text-primary/70 mb-16">
+          {t.about.hashtags}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -11,6 +11,7 @@ const Navbar = () => {
     { href: "#skills", label: t.nav.skills },
     { href: "#experience", label: t.nav.experience },
     { href: "#projects", label: t.nav.projects },
+    { href: "#resumes", label: t.nav.resumes },
     { href: "#contact", label: t.nav.contact },
   ];
 
@@ -21,7 +22,6 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="text-lg font-bold text-gradient">S.M.A</a>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -30,15 +30,14 @@ const Navbar = () => {
           ))}
           <button onClick={toggleLang} className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors border border-border rounded-full px-3 py-1">
             <Globe className="w-3.5 h-3.5" />
-            {language.toUpperCase()}
+            {language === "pt" ? "🇧🇷 PT" : "🇺🇸 EN"}
           </button>
         </div>
 
-        {/* Mobile toggle */}
         <div className="flex md:hidden items-center gap-3">
           <button onClick={toggleLang} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary border border-border rounded-full px-2.5 py-1">
             <Globe className="w-3.5 h-3.5" />
-            {language.toUpperCase()}
+            {language === "pt" ? "🇧🇷" : "🇺🇸"}
           </button>
           <button onClick={() => setOpen(!open)} className="text-foreground">
             {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -46,7 +45,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-lg">
           {links.map((l) => (
