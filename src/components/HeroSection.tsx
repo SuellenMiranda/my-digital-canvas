@@ -69,7 +69,7 @@ const HeroSection = () => {
 
         {/* Cycling photo */}
         <div className="flex-shrink-0">
-          <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-primary/30 glow relative">
+          <div className="w-56 h-56 md:w-72 md:h-72 rounded-2xl overflow-hidden border-2 border-primary/30 glow relative">
             {profileImages.map((src, i) => (
               <img
                 key={src}
