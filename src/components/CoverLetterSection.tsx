@@ -1,15 +1,35 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { FileText, Download, ChevronDown, ChevronUp } from "lucide-react";
+import { FileText, Download, ChevronDown } from "lucide-react";
 import { useState } from "react";
+
+/** Render **bold** markdown segments as <strong> */
+const renderBold = (text: string) => {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? (
+      <strong key={i} className="text-foreground">{part}</strong>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+};
 
 const CoverLetterSection = () => {
   const { t } = useLanguage();
   const [open, setOpen] = useState(false);
 
+  const paragraphs = [
+    t.resumes.cl_p1,
+    t.resumes.cl_p2,
+    t.resumes.cl_p3,
+    t.resumes.cl_p4,
+    t.resumes.cl_p5,
+    t.resumes.cl_p6,
+  ];
+
   return (
     <section id="cover-letter" className="py-16 sm:py-24 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
-        {/* Toggle button styled as a card */}
         <button
           onClick={() => setOpen(!open)}
           className="w-full group rounded-xl bg-card border border-border hover:border-primary/40 p-6 sm:p-8 flex items-center justify-between transition-all duration-300"
@@ -25,13 +45,12 @@ const CoverLetterSection = () => {
           </div>
         </button>
 
-        {/* Animated content */}
         <div
           className={`overflow-hidden transition-all duration-500 ease-in-out ${
             open ? "max-h-[2000px] opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"
           }`}
         >
-          <div className="rounded-xl bg-card border border-border p-5 sm:p-8 md:p-12 space-y-6 text-foreground leading-relaxed animate-fade-in">
+          <div className="rounded-xl bg-card border border-border p-5 sm:p-8 md:p-12 space-y-6 text-foreground leading-relaxed">
             <div className="text-center mb-8">
               <h3 className="text-xl font-bold text-foreground">Suellen Miranda Amorim</h3>
               <p className="text-sm text-muted-foreground mt-1">
@@ -40,39 +59,16 @@ const CoverLetterSection = () => {
             </div>
 
             <div className="border-t border-border pt-6 space-y-4 text-sm text-muted-foreground">
-              <p>Prezado(a),</p>
-
-              <p>
-                Sou <strong className="text-foreground">Desenvolvedora Full Stack e Designer</strong>, formada em <strong className="text-foreground">Ciência da Computação</strong> pela Universidade Vila Velha, e possuo experiência diversificada em <strong className="text-foreground">desenvolvimento web, SAP e realidade virtual</strong>.
-              </p>
-
-              <p>
-                Minha trajetória profissional inclui atuações em empresas como <strong className="text-foreground">Megawork Consultoria</strong>, onde atuei como <strong className="text-foreground">Desenvolvedora ABAP Trainee</strong>, e <strong className="text-foreground">PVT Software e Serviços</strong>, onde desenvolvi e mantive aplicações web e dei suporte em infraestrutura e cloud. Também atuei na <strong className="text-foreground">Jade Autism</strong>, com suporte e testes de aplicações, e na <strong className="text-foreground">Vale</strong>, no desenvolvimento de soluções de realidade virtual para treinamentos corporativos.
-              </p>
-
-              <p>
-                Além da experiência profissional, destaco meu projeto de TCC – <strong className="text-foreground">Job Match</strong>, um aplicativo móvel inovador para otimizar o recrutamento de estágios e empregos, com foco em oferecer feedback construtivo a candidatos e empresas. O sistema foi desenvolvido em <strong className="text-foreground">React Native</strong> (multiplataforma Android/iOS) com backend em <strong className="text-foreground">Node.js e Express.js</strong>, banco de dados gerenciado pelo <strong className="text-foreground">Prisma ORM</strong>, e integrações para notificações em tempo real e segurança de dados.
-              </p>
-
-              <p>
-                Ao longo da minha formação e carreira, desenvolvi habilidades em <strong className="text-foreground">React, React Native, TypeScript, Golang, SQL, SAP ABAP e SAP Build Apps</strong>, além de competências em infraestrutura de TI, cloud (<strong className="text-foreground">Azure, AWS, GCP</strong>) e <strong className="text-foreground">Unity para VR/AR</strong>. Meu perfil é marcado pela <strong className="text-foreground">proatividade, capacidade analítica e espírito colaborativo</strong>.
-              </p>
-
-              <p>
-                Acredito que minha combinação de experiência prática, formação sólida e projetos aplicados pode contribuir significativamente para o crescimento da sua equipe. Estou motivada para aprender continuamente, assumir novos desafios e agregar valor com soluções eficientes e inovadoras.
-              </p>
-
-              <p>
-                Agradeço a oportunidade e coloco-me à disposição para uma entrevista.
-              </p>
-
+              <p>{t.resumes.cl_greeting}</p>
+              {paragraphs.map((p, i) => (
+                <p key={i}>{renderBold(p)}</p>
+              ))}
               <p className="font-medium text-foreground mt-6">
-                Atenciosamente,<br />
+                {t.resumes.cl_closing}<br />
                 Suellen Miranda
               </p>
             </div>
 
-            {/* Download button */}
             <div className="flex justify-center pt-4">
               <a
                 href="https://suellenmiranda.github.io/Portifolio/assets/PDF/carta.pdf"
@@ -81,7 +77,7 @@ const CoverLetterSection = () => {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity"
               >
                 <Download className="w-4 h-4" />
-                Baixar PDF
+                {t.resumes.cl_download}
               </a>
             </div>
           </div>
