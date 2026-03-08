@@ -1,3 +1,4 @@
+// Portfolio page
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
