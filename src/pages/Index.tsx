@@ -34,6 +34,7 @@ const Index = () => {
         </main>
         <Footer />
         <ScrollToTop />
+        <FontSizeControl />
       </LanguageProvider>
     </ThemeProvider>
   );
