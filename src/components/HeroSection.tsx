@@ -1,5 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ArrowDown } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const techBadges = [
   "React", "TypeScript", "Node.js", "Figma", "UI/UX", "React Native",
@@ -7,15 +8,28 @@ const techBadges = [
   "SAP Build Apps", "Unity (VR/AR)", "Cloud (AWS, Azure, GCP)",
 ];
 
+const profileImages = [
+  "/images/me.jpg",
+  "/images/perfil.png",
+  "/images/profile.jpeg",
+];
+
 const HeroSection = () => {
   const { t } = useLanguage();
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % profileImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="min-h-screen flex items-center justify-center relative px-6">
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-4xl w-full flex flex-col md:flex-row items-center gap-12 relative z-10">
-        {/* Left content */}
         <div className="flex-1 text-center md:text-left">
           <p className="text-sm font-mono text-primary tracking-widest uppercase mb-4">
             {t.hero.greeting}
@@ -53,14 +67,19 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right photo */}
+        {/* Cycling photo */}
         <div className="flex-shrink-0">
-          <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-primary/30 glow">
-            <img
-              src="/images/me.jpg"
-              alt="Suellen Miranda Amorim"
-              className="w-full h-full object-cover"
-            />
+          <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-primary/30 glow relative">
+            {profileImages.map((src, i) => (
+              <img
+                key={src}
+                src={src}
+                alt="Suellen Miranda Amorim"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                  i === currentImage ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>

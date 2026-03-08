@@ -6,6 +6,7 @@ const projectData = [
   { image: "/images/ligav.png", link: "https://ligav.com.br" },
   { image: "/images/SiteMarcenaria.png", link: "https://suellenmiranda.github.io/Marcenaria-Artesanal-Modelo/" },
   { image: "/images/dashboard.png", link: "https://suellenmiranda.github.io/finance-dashboard/" },
+  { image: "/images/demo.jpg", link: "https://bryntum.com/products/gantt/examples/portfolio-planning" },
 ];
 
 const ProjectsSection = () => {
