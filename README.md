@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# Portfólio - Suellen Miranda
 
-## Project info
+Aplicação web de portfólio profissional desenvolvida com React, TypeScript e Vite.
+O projeto reúne apresentação pessoal, experiências, projetos, links de contato e seções de currículo.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tecnologias
 
-## How can I edit this code?
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+- React Router
 
-There are several ways of editing your application.
+## Requisitos
 
-**Use Lovable**
+- Node.js 20+ (recomendado)
+- npm
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Como rodar localmente
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+git clone https://github.com/SuellenMiranda/my-digital-canvas.git
+cd my-digital-canvas
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Aplicação local: `http://localhost:8080/`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Scripts disponíveis
 
-**Use GitHub Codespaces**
+- `npm run dev`: inicia o servidor de desenvolvimento
+- `npm run build`: gera build de produção
+- `npm run preview`: serve localmente a build gerada
+- `npm run lint`: executa o lint do projeto
+- `npm run test`: executa testes com Vitest
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deploy (GitHub Pages)
 
-## What technologies are used for this project?
+O projeto utiliza GitHub Actions para deploy automático no GitHub Pages.
 
-This project is built with:
+### Fluxo
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Faça push na branch `main`
+2. O workflow `.github/workflows/deploy-pages.yml` executa build e deploy
+3. O site é publicado no GitHub Pages
 
-## How can I deploy this project?
+### Configuração no GitHub
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+- Em `Settings > Pages`, defina `Source` como `GitHub Actions`
+- Em `Settings > Actions > General`, habilite `Read and write permissions` para workflows
 
-## Can I connect a custom domain to my Lovable project?
+## Estrutura principal
 
-Yes, you can!
+- `src/`: código-fonte React
+- `public/`: arquivos estáticos
+- `.github/workflows/`: automações de CI/CD
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Licença
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Este projeto é de uso pessoal/profissional para apresentação de portfólio.
