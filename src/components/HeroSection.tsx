@@ -27,10 +27,10 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative px-6">
+    <section className="min-h-screen flex items-center justify-center relative px-4 sm:px-6 overflow-hidden">
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-4xl w-full flex flex-col md:flex-row items-center gap-12 relative z-10">
+      <div className="max-w-4xl w-full flex flex-col md:flex-row items-center gap-12 relative z-10 pt-6 sm:pt-8 md:pt-0">
         <div className="flex-1 text-center md:text-left">
           <p className="text-sm font-mono text-primary tracking-widest uppercase mb-4">
             {t.hero.greeting}

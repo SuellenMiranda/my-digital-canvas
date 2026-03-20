@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Globe, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
@@ -17,6 +17,13 @@ const Navbar = () => {
   ];
 
   const toggleLang = () => setLanguage(language === "pt" ? "en" : "pt");
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -36,26 +43,49 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className="flex md:hidden items-center gap-3">
+        <div className="flex md:hidden items-center gap-2">
           <ThemeToggle />
-          <button onClick={toggleLang} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary border border-border rounded-full px-2.5 py-1">
+          <button onClick={toggleLang} className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary border border-border rounded-full px-2.5 py-1.5 min-h-9">
             <Globe className="w-3.5 h-3.5" />
             {language === "pt" ? "🇧🇷" : "🇺🇸"}
           </button>
-          <button onClick={() => setOpen(!open)} className="text-foreground">
+          <button
+            onClick={() => setOpen(!open)}
+            className="inline-flex items-center justify-center h-9 w-9 rounded-md border border-border text-foreground"
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+          >
             {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-lg">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block px-6 py-3 text-sm text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors">
-              {l.label}
-            </a>
-          ))}
-        </div>
+        <>
+          <button
+            className="md:hidden fixed inset-0 top-16 bg-background/60 backdrop-blur-sm"
+            onClick={() => setOpen(false)}
+            aria-label="Fechar menu"
+          />
+          <div
+            id="mobile-menu"
+            className="md:hidden fixed top-16 left-0 right-0 z-50 border-t border-border bg-background/95 backdrop-blur-lg shadow-lg"
+          >
+            <div className="px-4 py-3 space-y-1 max-h-[calc(100vh-4rem)] overflow-y-auto">
+              {links.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="block px-3 py-3 rounded-md text-base text-foreground/90 hover:text-primary hover:bg-muted/60 transition-colors"
+                >
+                  {l.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </>
       )}
     </nav>
   );
