@@ -10,6 +10,7 @@ import CoverLetterSection from "@/components/CoverLetterSection";
 import DISCSection from "@/components/DISCSection";
 import ResumesSection from "@/components/ResumesSection";
 import ContactSection from "@/components/ContactSection";
+import SupportSection from "@/components/SupportSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import EasterEgg from "@/components/EasterEgg";
@@ -31,6 +32,7 @@ const Index = () => {
           <DISCSection />
           <ResumesSection />
           <ContactSection />
+          <SupportSection />
         </main>
         <Footer />
         <ScrollToTop />

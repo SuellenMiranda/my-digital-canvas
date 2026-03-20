@@ -14,6 +14,7 @@ const Navbar = () => {
     { href: "#projects", label: t.nav.projects },
     { href: "#resumes", label: t.nav.resumes },
     { href: "#contact", label: t.nav.contact },
+    { href: "#support", label: t.nav.support },
   ];
 
   const toggleLang = () => setLanguage(language === "pt" ? "en" : "pt");

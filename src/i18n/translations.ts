@@ -7,6 +7,7 @@ export const translations = {
       projects: "Projetos",
       resumes: "Currículos",
       contact: "Contato",
+      support: "Apoio",
     },
     hero: {
       greeting: "Olá, eu sou",
@@ -199,6 +200,11 @@ export const translations = {
       error_submit_failed: "Nao foi possivel enviar agora. Tente novamente em instantes.",
       success_sent: "Mensagem enviada com sucesso!",
     },
+    support: {
+      title: "Apoie o projeto",
+      subtitle: "Se quiser apoiar meu trabalho, pode me pagar um café — obrigada!",
+      bmc_alt: "Buy Me a Coffee",
+    },
     footer: {
       rights: "Todos os direitos reservados.",
       made_with: "Feito com",
@@ -213,6 +219,7 @@ export const translations = {
       projects: "Projects",
       resumes: "Resumes",
       contact: "Contact",
+      support: "Support",
     },
     hero: {
       greeting: "Hi, I'm",
@@ -404,6 +411,11 @@ export const translations = {
       error_email_invalid: "Please enter a valid email (example: name@domain.com).",
       error_submit_failed: "Could not send right now. Please try again shortly.",
       success_sent: "Message sent successfully!",
+    },
+    support: {
+      title: "Support the project",
+      subtitle: "If you'd like to support my work, you can buy me a coffee — thank you!",
+      bmc_alt: "Buy Me a Coffee",
     },
     footer: {
       rights: "All rights reserved.",
