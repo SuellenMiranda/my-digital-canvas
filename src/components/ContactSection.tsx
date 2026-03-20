@@ -2,11 +2,41 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Github, Linkedin, Gamepad2, Twitch, Instagram } from "lucide-react";
 
 const socials = [
-  { icon: Gamepad2, label: "itch.io", href: "https://suh-euclxel.itch.io" },
-  { icon: Github, label: "GitHub", href: "https://github.com/SuellenMiranda" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/suellenmiranda" },
-  { icon: Twitch, label: "Twitch", href: "https://www.twitch.tv/suh_euclxel" },
-  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/mayukosuh" },
+  {
+    icon: Gamepad2,
+    label: "itch.io",
+    href: "https://suh-euclxel.itch.io",
+    iconClass: "text-[#fa5c5c]",
+    chipClass: "bg-[#fa5c5c]/10 border-[#fa5c5c]/40 group-hover:bg-[#fa5c5c]/20",
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    href: "https://github.com/SuellenMiranda",
+    iconClass: "text-[#333333] dark:text-[#f5f5f5]",
+    chipClass: "bg-secondary border-border group-hover:bg-secondary/80",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/suellenmiranda",
+    iconClass: "text-[#0A66C2]",
+    chipClass: "bg-[#0A66C2]/10 border-[#0A66C2]/40 group-hover:bg-[#0A66C2]/20",
+  },
+  {
+    icon: Twitch,
+    label: "Twitch",
+    href: "https://www.twitch.tv/suh_euclxel",
+    iconClass: "text-[#9146FF]",
+    chipClass: "bg-[#9146FF]/10 border-[#9146FF]/40 group-hover:bg-[#9146FF]/20",
+  },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    href: "https://www.instagram.com/mayukosuh",
+    iconClass: "text-[#E1306C]",
+    chipClass: "bg-[#E1306C]/10 border-[#E1306C]/40 group-hover:bg-[#E1306C]/20",
+  },
 ];
 
 const ContactSection = () => {
@@ -56,10 +86,10 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="flex flex-col items-center gap-1.5 group"
               >
-                <div className="p-3 rounded-full bg-secondary text-muted-foreground group-hover:text-primary group-hover:border-primary/40 border border-border transition-colors">
-                  <s.icon className="w-5 h-5" />
+                <div className={`p-3 rounded-full border transition-colors ${s.chipClass}`}>
+                  <s.icon className={`w-5 h-5 ${s.iconClass}`} />
                 </div>
-                <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors">{s.label}</span>
+                <span className={`text-xs transition-colors ${s.iconClass}`}>{s.label}</span>
               </a>
             ))}
           </div>
