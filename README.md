@@ -1,6 +1,7 @@
 # Portifolio — Suellen Miranda
 
 Aplicação web de portfólio profissional desenvolvida com React, TypeScript e Vite.
+O nome do repositório no GitHub deve ser **`Portifolio`** (P maiúsculo); a URL do Pages é sensível a maiúsculas/minúsculas. No `package.json`, o campo `name` segue a convenção do npm em minúsculas (`portifolio`), mas o projeto continua sendo **Portifolio**.
 O projeto reúne apresentação pessoal, experiências, projetos, links de contato e seções de currículo.
 
 ## Tecnologias

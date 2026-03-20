@@ -31,6 +31,9 @@ jobs:
         run: npm install
 
       - name: Build
+        env:
+          # Nome exato do repositório (inclui maiúsculas), necessário para o base do Vite no GitHub Pages
+          GITHUB_PAGES_BASE: /${{ github.event.repository.name }}/
         run: npm run build
 
       - name: SPA fallback for React Router

@@ -1,5 +1,6 @@
 {
-    "name": "Portifolio",
+    "name": "portifolio",
+    "description": "Portifolio — portfólio de Suellen Miranda Amorim",
     "private": true,
     "version": "0.0.0",
     "type": "module",
