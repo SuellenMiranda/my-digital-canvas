@@ -219,6 +219,21 @@ Em `Settings > Actions > General`:
 
 - Workflow permissions: `Read and write permissions`
 
+### Formulario de contato
+
+O botao "Enviar Mensagem" envia via `FormSubmit` (sem backend proprio).
+
+Configuracao inicial necessaria:
+
+1. realizar o primeiro envio de teste no formulario
+2. confirmar o email recebido pelo FormSubmit na caixa de entrada
+3. apos a confirmacao, os proximos envios passam a funcionar normalmente
+
+Emails de destino:
+
+- principal: `suellen.org@gmail.com`
+- copia: `suellen.dsredev@gmail.com`
+
 ---
 
 ## Scripts NPM
@@ -286,4 +301,3 @@ Acesso padrao local: `http://localhost:8080/`
 - [ ] Links externos validos
 - [ ] Sem overflow horizontal no mobile
 - [ ] Imagens carregando no Pages
-
