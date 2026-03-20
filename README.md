@@ -1,4 +1,4 @@
-# Portfólio - Suellen Miranda
+# Portifolio — Suellen Miranda
 
 Aplicação web de portfólio profissional desenvolvida com React, TypeScript e Vite.
 O projeto reúne apresentação pessoal, experiências, projetos, links de contato e seções de currículo.
@@ -20,8 +20,8 @@ O projeto reúne apresentação pessoal, experiências, projetos, links de conta
 ## Como rodar localmente
 
 ```bash
-git clone https://github.com/SuellenMiranda/my-digital-canvas.git
-cd my-digital-canvas
+git clone https://github.com/SuellenMiranda/Portifolio.git
+cd Portifolio
 npm install
 npm run dev
 ```
@@ -50,6 +50,12 @@ O projeto utiliza GitHub Actions para deploy automático no GitHub Pages.
 
 - Em `Settings > Pages`, defina `Source` como `GitHub Actions`
 - Em `Settings > Actions > General`, habilite `Read and write permissions` para workflows
+
+Após renomear o repositório no GitHub para `Portifolio`, a URL do site passa a ser:
+
+`https://suellenmiranda.github.io/Portifolio/`
+
+(O `vite.config.ts` usa o nome do repositório em produção; atualize o `remote` local se precisar: `git remote set-url origin https://github.com/SuellenMiranda/Portifolio.git`.)
 
 ## Estrutura principal
 
