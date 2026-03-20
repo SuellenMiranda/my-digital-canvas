@@ -2,16 +2,16 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const resumeLinks = {
   basic: {
-    pt: "https://docs.google.com/document/d/1hnQBaOoiDFFEvEgBvAvWUi3Le8mA506A/preview",
-    en: "https://docs.google.com/document/d/1ijDzKlg0byh1Vh6xXM3G0_khfcTpVoor/preview",
+    pt: "https://docs.google.com/document/d/1hnQBaOoiDFFEvEgBvAvWUi3Le8mA506A",
+    en: "https://docs.google.com/document/d/1ijDzKlg0byh1Vh6xXM3G0_khfcTpVoor",
   },
   complete: {
-    pt: "https://docs.google.com/document/d/152CPK50G-cAhRD_MDi-wIA8Qn4jTn164wFNJHgR7wFU/preview",
-    en: "https://docs.google.com/document/d/1beWBLBgMX-D5qOtHmY46rWAo3KgWqvc25Y9O6Wva14A/preview",
+    pt: "https://docs.google.com/document/d/152CPK50G-cAhRD_MDi-wIA8Qn4jTn164wFNJHgR7wFU",
+    en: "https://docs.google.com/document/d/1beWBLBgMX-D5qOtHmY46rWAo3KgWqvc25Y9O6Wva14A",
   },
   specific: {
-    pt: "https://docs.google.com/document/d/1Pi7nHELhUeiI0hJudKY_s5m9IWoj_kQNGT0bmywwZ4A/preview",
-    en: "https://docs.google.com/document/d/1g9hrHiSvJGWDFZzBKlVG4sFYlVskgfk3VmODisEqdAA/preview",
+    pt: "https://docs.google.com/document/d/1Pi7nHELhUeiI0hJudKY_s5m9IWoj_kQNGT0bmywwZ4A",
+    en: "https://docs.google.com/document/d/1g9hrHiSvJGWDFZzBKlVG4sFYlVskgfk3VmODisEqdAA",
   },
 };
 
