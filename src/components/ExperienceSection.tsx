@@ -1,4 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { assetUrl } from "@/lib/assets";
 import { MapPin, ExternalLink } from "lucide-react";
 
 interface MediaItem {
@@ -10,15 +11,15 @@ interface MediaItem {
 
 const experienceMedia: Record<number, MediaItem[]> = {
   0: [
-    { type: "image", src: "/images/ligav.png", label: "Ligav", href: "https://ligav.com.br" },
+    { type: "image", src: assetUrl("images/ligav.png"), label: "Ligav", href: "https://ligav.com.br" },
   ],
   1: [
     { type: "youtube", src: "https://www.youtube.com/embed/lhrFaCAmT3E", label: "SAP Build Apps — Projeto 1" },
     { type: "youtube", src: "https://www.youtube.com/embed/EgcWgUYFjIY", label: "SAP Build Apps — Projeto 2" },
   ],
   2: [
-    { type: "image", src: "/images/design-dev-fullstack.png", label: "Design DEV FullStack" },
-    { type: "image", src: "/images/demo.jpg", label: "Demo Bryntum", href: "https://bryntum.com/products/gantt/examples/portfolio-planning" },
+    { type: "image", src: assetUrl("images/design-dev-fullstack.png"), label: "Design DEV FullStack" },
+    { type: "image", src: assetUrl("images/demo.jpg"), label: "Demo Bryntum", href: "https://bryntum.com/products/gantt/examples/portfolio-planning" },
   ],
   3: [],
   4: [

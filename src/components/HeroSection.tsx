@@ -1,4 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { assetUrl } from "@/lib/assets";
 import { ArrowDown } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -9,9 +10,9 @@ const techBadges = [
 ];
 
 const profileImages = [
-  "/images/me.jpg",
-  "/images/perfil.png",
-  "/images/profile.jpeg",
+  assetUrl("images/me.jpg"),
+  assetUrl("images/perfil.png"),
+  assetUrl("images/profile.jpeg"),
 ];
 
 const HeroSection = () => {

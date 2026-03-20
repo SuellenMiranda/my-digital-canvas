@@ -1,12 +1,13 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { assetUrl } from "@/lib/assets";
 import { ExternalLink } from "lucide-react";
 
 const projectData = [
-  { image: "/images/AppMobile.png", link: "" },
-  { image: "/images/ligav.png", link: "https://ligav.com.br" },
-  { image: "/images/SiteMarcenaria.png", link: "https://suellenmiranda.github.io/Marcenaria-Artesanal-Modelo/" },
-  { image: "/images/dashboard.png", link: "https://suellenmiranda.github.io/finance-dashboard/" },
-  { image: "/images/demo.jpg", link: "https://bryntum.com/products/gantt/examples/portfolio-planning" },
+  { image: assetUrl("images/AppMobile.png"), link: "" },
+  { image: assetUrl("images/ligav.png"), link: "https://ligav.com.br" },
+  { image: assetUrl("images/SiteMarcenaria.png"), link: "https://suellenmiranda.github.io/Marcenaria-Artesanal-Modelo/" },
+  { image: assetUrl("images/dashboard.png"), link: "https://suellenmiranda.github.io/finance-dashboard/" },
+  { image: assetUrl("images/demo.jpg"), link: "https://bryntum.com/products/gantt/examples/portfolio-planning" },
 ];
 
 const ProjectsSection = () => {
